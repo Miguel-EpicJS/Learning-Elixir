@@ -1,2 +1,2 @@
-# Learning-Go
-Learning... GO!
+# Learning-Elixir
+Drink elixir...!
