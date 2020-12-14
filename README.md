@@ -1,2 +1,2 @@
 # Learning-Elixir
-Drink elixir...!
+Drink elixir...
