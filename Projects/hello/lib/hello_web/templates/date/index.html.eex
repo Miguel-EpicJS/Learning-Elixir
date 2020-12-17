@@ -1,0 +1,3 @@
+<div class="phx-hero">
+    <%= NaiveDateTime.utc_now %>
+</div>
