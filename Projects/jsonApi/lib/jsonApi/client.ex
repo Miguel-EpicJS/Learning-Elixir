@@ -1,7 +1,6 @@
 defmodule JsonApi.Client do
   use Ecto.Schema
   import Ecto.Changeset
-  alias JsonApi.Client
 
   schema "clients" do
     field :address, :string
