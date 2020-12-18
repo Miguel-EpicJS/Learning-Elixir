@@ -17,6 +17,7 @@ defmodule JsonApiWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/api/clients", ClientController, :index
   end
 
   # Other scopes may use custom stacks.
