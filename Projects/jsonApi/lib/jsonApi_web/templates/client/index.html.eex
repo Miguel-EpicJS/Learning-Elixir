@@ -1,0 +1,13 @@
+<div class="phx-hero">
+
+    <h1>Simple Clients API</h1>
+    <div class="cards">
+        <div class="card">
+            <h2> The name is here </h2>
+            <h5> The price is here</h5>
+            <h3> The address is here</h3>
+            <p>The description is here</p>
+        </div>
+    </div>
+
+</div>
