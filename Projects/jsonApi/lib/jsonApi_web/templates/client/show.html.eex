@@ -1,6 +1,6 @@
 <div class="phx-hero">
 
-    <h1>This is the client...</h1>
+    <h1>This is the client <%= @id %><h1>
 
 
 </div>
