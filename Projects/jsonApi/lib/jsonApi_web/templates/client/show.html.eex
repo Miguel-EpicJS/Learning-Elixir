@@ -1,6 +1,0 @@
-<div class="phx-hero">
-
-    <h1>This is the client <%= @id %><h1>
-    <h3><a href="http://127.0.0.1:4000/api/clients/<%= @id %>/edit">Edit client <%= @id %> </a></h3>
-
-</div>
