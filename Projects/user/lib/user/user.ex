@@ -1,6 +1,7 @@
 defmodule User.User do
   use Ecto.Schema
   import Ecto.Changeset
+  alias User.User
 
   schema "users" do
     field :email, :string
@@ -10,7 +11,7 @@ defmodule User.User do
   end
 
   @doc false
-  def changeset(user, attrs) do
+  def changeset(%User{} = user, attrs) do
     user
     |> cast(attrs, [:name, :email])
     |> validate_required([:name, :email])
