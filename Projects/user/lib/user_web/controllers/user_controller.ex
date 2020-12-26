@@ -13,4 +13,13 @@ defmodule UserWeb.UserController do
   def show(conn, _params) do
     render(conn, "show.html")
   end
+  def create(conn, _params) do
+    IO.puts(conn)
+  end
+  def update(conn, _params) do
+    IO.puts(conn)
+  end
+  def delete(conn, _params) do
+    IO.puts(conn)
+  end
 end
