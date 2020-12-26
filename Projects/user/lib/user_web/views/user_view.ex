@@ -1,3 +1,3 @@
-defmodule UserWeb.LayoutView do
+defmodule UserWeb.UserView do
   use UserWeb, :view
 end
