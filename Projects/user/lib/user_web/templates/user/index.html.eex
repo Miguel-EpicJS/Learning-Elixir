@@ -1,1 +1,8 @@
-<div class="phx-hero">Hello word</div>
+<div class="phx-hero">
+    <h1>Users: </h1>
+    <ul>
+        <%= for userId <- 0..length(User.Repo.all(User.User))-1 do %>
+            <li><a href="http://127.0.0.1:4000/users/<%= userId %>"><%= Enum.at(User.Repo.all(User.User), userId).name %></a></li>
+        <% end %>
+    </ul>
+</div>
