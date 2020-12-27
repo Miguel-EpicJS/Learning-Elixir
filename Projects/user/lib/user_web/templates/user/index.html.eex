@@ -2,7 +2,7 @@
     <h1>Users: </h1>
     <ul>
         <%= for userId <- 0..length(User.Repo.all(User.User))-1 do %>
-            <li><a href="http://127.0.0.1:4000/users/<%= userId %>"><%= Enum.at(User.Repo.all(User.User), userId).name %></a></li>
+            <li><%= link(Enum.at(User.Repo.all(User.User), userId).name, to: "/users/#{userId}")%></li>
         <% end %>
     </ul>
 </div>
