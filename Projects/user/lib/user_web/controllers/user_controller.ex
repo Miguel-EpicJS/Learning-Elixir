@@ -10,8 +10,8 @@ defmodule UserWeb.UserController do
   def new(conn, _params) do
     render(conn, "new.html")
   end
-  def show(conn, _params) do
-    render(conn, "show.html")
+  def show(conn, %{"id" => id}) do
+    render(conn, "show.html", id: id)
   end
   def create(conn, _params) do
     IO.puts(conn)

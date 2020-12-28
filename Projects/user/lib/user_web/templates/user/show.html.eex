@@ -1,1 +1,3 @@
-<div class="phx-hero">Hello word</div>
+<div class="phx-hero">
+    <h2>User name: <b> <%= Enum.at(User.Repo.all(User.User), 0).name %> </b></h2>
+</div>
