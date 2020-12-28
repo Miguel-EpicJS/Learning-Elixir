@@ -5,4 +5,5 @@
     <% else %>
         <h2>This user not exist</h2>
     <% end %>
+    <h3> <%= link("Go back", to: "/users/") %> </h3>
 </div>
