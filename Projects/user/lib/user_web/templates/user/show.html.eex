@@ -1,6 +1,7 @@
 <div class="phx-hero">
     <%= if @id < length(User.Repo.all(User.User)) do %>
         <h2>User name: <b> <%= Enum.at(User.Repo.all(User.User), @id).name %> </b></h2>
+        <h5>User email: <b> <%= Enum.at(User.Repo.all(User.User), @id).email %> </b></h5>
     <% else %>
         <h2>This user not exist</h2>
     <% end %>
