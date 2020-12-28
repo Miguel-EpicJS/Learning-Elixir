@@ -11,6 +11,7 @@ defmodule UserWeb.UserController do
     render(conn, "new.html")
   end
   def show(conn, %{"id" => id}) do
+    id = String.to_integer(id)
     render(conn, "show.html", id: id)
   end
   def create(conn, _params) do
