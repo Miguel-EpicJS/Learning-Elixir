@@ -5,6 +5,7 @@
             <li><%= link(Enum.at(User.Repo.all(User.User), userId).name, to: "/users/#{userId}")%></li>
         <% end %>
 
-        <%= link("Go back", to: "/") %>
+        <p><%= link("Go back", to: "/") %></p>
+        <p><%= link("Create user", to: "/users/new") %></p>
     </ul>
 </div>
