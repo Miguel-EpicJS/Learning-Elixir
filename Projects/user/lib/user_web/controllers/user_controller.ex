@@ -1,6 +1,6 @@
 defmodule UserWeb.UserController do
   use UserWeb, :controller
-  alias User.User
+  alias User.{Repo, User}
 
   def index(conn, _params) do
     render(conn, "index.html")
@@ -16,7 +16,11 @@ defmodule UserWeb.UserController do
     id = String.to_integer(id)
     render(conn, "show.html", id: id)
   end
-  def create(conn, _params) do
+  def create(conn, params) do
+    changeset = User.changeset(%User{}, params["user"])
+    if changeset.valid? do
+      Repo.insert(%User{name: changeset.changes.name, email: changeset.changes.email})
+    end
     render(conn, "index.html")
   end
   def update(conn, _params) do
