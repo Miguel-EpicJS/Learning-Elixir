@@ -5,8 +5,10 @@ defmodule UserWeb.UserController do
   def index(conn, _params) do
     render(conn, "index.html")
   end
-  def edit(conn, _params) do
-    render(conn, "edit.html")
+  def edit(conn, %{"id" => id}) do
+    id = String.to_integer(id)
+    changeset = User.changeset(%User{})
+    render(conn, "edit.html", changeset: changeset, id: id)
   end
   def new(conn, _params) do
     changeset = User.changeset(%User{})
