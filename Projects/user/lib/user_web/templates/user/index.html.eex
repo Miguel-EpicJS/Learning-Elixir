@@ -4,5 +4,7 @@
         <%= for userId <- 0..length(User.Repo.all(User.User))-1 do %>
             <li><%= link(Enum.at(User.Repo.all(User.User), userId).name, to: "/users/#{userId}")%></li>
         <% end %>
+
+        <%= link("Go back", to: "/") %>
     </ul>
 </div>
