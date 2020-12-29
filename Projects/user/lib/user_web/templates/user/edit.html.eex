@@ -1,7 +1,7 @@
 <div class="phx-hero">
     <h1>Edit Form</h1>
-    <%= form_for @changeset, Routes.user_path(@conn, :update), fn f -> %>
-        <%= hidden_input f, :id, value: @id %>
+    <%= form_for @changeset, Routes.user_path(@conn, :update, @id),[method: "patch"], fn f -> %>
+
         <label>
             Name: <%= text_input f, :name %>
         </label>
