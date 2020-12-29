@@ -3,11 +3,11 @@
     <%= form_for @changeset, Routes.user_path(@conn, :update, @id),[method: "patch"], fn f -> %>
 
         <label>
-            Name: <%= text_input f, :name %>
+            Name: <%= text_input f, :name, value: Enum.at(User.Repo.all(User.User), @id).name %>
         </label>
 
         <label>
-            Email: <%= text_input f, :email %>
+            Email: <%= text_input f, :email, value: Enum.at(User.Repo.all(User.User), @id).email %>
         </label>
 
         <%= submit "Submit" %>
