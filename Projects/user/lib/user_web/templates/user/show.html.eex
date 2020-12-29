@@ -7,4 +7,5 @@
     <% end %>
     <h3> <%= link("Go back", to: "/users/") %> </h3>
     <h3> <%= link("Edit User", to: "/users/#{@id}/edit") %> </h3>
+    <h3> <%= link("Delete User", to: "/users/#{@id}/", method: :delete) %> </h3>
 </div>
