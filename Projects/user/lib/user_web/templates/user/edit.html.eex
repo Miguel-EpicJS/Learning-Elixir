@@ -1,1 +1,16 @@
-<div class="phx-hero">Hello word</div>
+<div class="phx-hero">
+    <h1>Edit Form</h1>
+    <%= form_for @changeset, Routes.user_path(@conn, :update), fn f -> %>
+        <%= hidden_input f, :id, value: @id %>
+        <label>
+            Name: <%= text_input f, :name %>
+        </label>
+
+        <label>
+            Email: <%= text_input f, :email %>
+        </label>
+
+        <%= submit "Submit" %>
+    <% end %>
+
+</div>
