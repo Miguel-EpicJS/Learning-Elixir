@@ -25,8 +25,11 @@ defmodule UserWeb.UserController do
     end
     render(conn, "index.html")
   end
-  def update(conn, _params) do
-    IO.puts(conn)
+  def update(conn, params) do
+    user = Enum.at(Repo.all(User), String.to_integer(params["id"]))
+    charset = User.changeset(user, %{name: params["user"]["name"], email: params["user"]["email"] })
+    Repo.update(charset)
+    render(conn, "index.html")
   end
   def delete(conn, _params) do
     IO.puts(conn)
