@@ -27,8 +27,12 @@ defmodule ClientWeb.UserController do
   end
 
   def show(conn, %{"id" => id}) do
-    user = Clients.get_user!(id)
-    render(conn, "show.html", user: user)
+    try do
+      user = Clients.get_user!(id)
+      render(conn, "show.html", user: user)
+    rescue
+      e in Ecto.NoResultsError -> render(conn, "error.html", e: e)
+    end
   end
 
   def edit(conn, %{"id" => id}) do
