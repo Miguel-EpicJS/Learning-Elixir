@@ -8,6 +8,14 @@ end
 
 IO.puts ThisIsAModule.andThisIsAFunction()
 
-#or you can use `alias`
+defmodule ThisIsAModule.Inside do
+  def thisIsAnotherFunction do
+    "Yep, you can use multiple modules"
+  end
+end
 
-alias ThisIsAModule
+# for this use alias
+
+alias ThisIsAModule.Inside
+
+IO.puts Inside.thisIsAnotherFunction()
