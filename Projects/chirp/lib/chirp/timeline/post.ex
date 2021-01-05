@@ -16,5 +16,6 @@ defmodule Chirp.Timeline.Post do
     post
     |> cast(attrs, [:username, :body, :likes_count, :reposts_count])
     |> validate_required([:username, :body, :likes_count, :reposts_count])
+    |> validate_length(:body, min: 2, max: 250)
   end
 end
